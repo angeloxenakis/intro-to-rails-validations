@@ -1,0 +1,13 @@
+<h1>Create a User</h1>
+<hr>
+
+<% if @user.errors.any? %>
+    <% @user.errors.full_messages do |error_msg| %>
+        <li><%= error_msg %></li>
+    <% end %>
+<% end %>
+
+<%= form_for @user do |f| %>
+    Name: <%= f.text_field :name %><br><br>
+    <%= f.submit %><br><br>
+<% end %>

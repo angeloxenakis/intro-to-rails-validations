@@ -1,0 +1,8 @@
+<h1>Create a Movie</h1>
+<hr>
+
+<%= form_for @movie do |f| %>
+    Title: <%= f.text_field :title %><br><br>
+    Rating: <%= f.text_field :rating %><br><br>
+    <%= f.submit %><br><br>
+<% end %>
